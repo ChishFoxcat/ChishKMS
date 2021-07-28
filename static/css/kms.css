@@ -1,0 +1,313 @@
+@charset "utf-8";
+/**
+ *   _____ _     _     _     _  ____  __  _____ 
+ *  / ____| |   (_)   | |   | |/ /  \/  |/ ____|
+ * | |    | |__  _ ___| |__ | ' /| \  / | (___  
+ * | |    | '_ \| / __| '_ \|  < | |\/| |\___ \ 
+ * | |____| | | | \__ \ | | | . \| |  | |____) |
+ *  \_____|_| |_|_|___/_| |_|_|\_\_|  |_|_____/ 
+ * =================================================
+ * ChishKMS's Stylesheet
+ * Author: Chish & ohmyga
+ * Link: https://kms.fchish.cn/
+ * Github: https://github.com/ChishFoxcat
+ * Last Update: 2021/02/06
+ *
+ * Copyright (c) 2021 ChishKMS All Rights Reserved.
+ **/
+
+/* ============================================================================ */
+/* 这个是防止在移动端点击按钮、超链接时出现浅蓝色背景 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* BODY 样式 */
+/* 将浏览器默认边距都给设置为 0 */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY 样式 */
+/* 将其改为 flex 布局 */
+body.kms-body {
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 主容器 */
+/* 它用于水平垂直居中主容器 所以得套这层 */
+.kms-app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 主容器 */
+.container {
+  display: flex;
+  border-radius: 20px;
+  background-color: #f0f0f0d8;
+  padding: 30px 60px;
+  position: relative;
+}
+
+.container.kms-container-width {
+  max-width: 1200px;
+}
+
+/* 主容器阴影 */
+.container.kms-container-shadow {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.container.kms-container-shadow:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================================ */
+/* 趴 */
+.container .chish-orz {
+  height: 71px;
+  width: 150px;
+  top: -65px;
+  right: 30px;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 图标 */
+/* 主容器内左侧图标 */
+.container .left-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* 以背景图形式展示 用户无法右键直接打开图片 且禁止用户选中*/
+.container .left-icon div.icon {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 文字信息 */
+.container .right-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+}
+
+.container .right-info h1.title {
+  margin-block-end: 0;
+}
+
+.container .right-info h1.title.up {
+  color: #20a53a;
+}
+
+.container .right-info h1.title.down {
+  color: #f44336;
+}
+
+.container .right-info h3.status {
+  margin-block-start: 10px;
+}
+
+.container .right-info ul {
+  padding-left: 20px;
+  margin-block-start: 0;
+}
+
+.container .right-info ul li {
+  line-height: 2.3;
+}
+
+.container .right-info a {
+  color: #ffa500;
+}
+
+.container .right-info .button {
+  color: #000;
+  border-radius: 5px;
+  padding: 16px 32px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #ffa500;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.container .right-info .button:hover {
+  color: #fff;
+  background-color: #ffa500;
+}
+
+/* 禁止选中状态标题和状态说明文字 还有按钮 */
+/* 就那个 `Working :)` 和下面那行说明文字和 `节点状态` 的那个按钮*/
+.container .right-info h1.title,
+.container .right-info h3.status,
+.container .right-info .button {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* HI */
+/* 右下角 Hi.png */
+.chish-hi {
+  width: 400px;
+  height: 413px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+.chish-hi.chish-kawaii {
+  right: 10px;
+  bottom: 0;
+  position: absolute;
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 底部版权 */
+/* 颜色超浅 反正就是版权越多越好（？） */
+.kms-copyright {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 10px 10px;
+  transition: all 0.3s;
+  color: rgba(66, 66, 66, 0.1);
+  cursor: default;
+  font-weight: bold;
+}
+
+.kms-copyright:hover {
+  color: rgba(66, 66, 66, 0.6);
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 文字选中颜色 */
+/* 至少比默认的蓝色好看（？） */
+::selection {
+  color: #fff;
+  background-color: rgba(255, 165, 0, 0.55);
+}
+/* ============================================================================ */
+
+/* ============================================================================ */
+/* 媒体查询 | 自适应 */
+/* 如果屏幕宽度等于或小于 1200 像素时 */
+@media (max-width: 1200px) {
+  .chish-hi {
+    width: 350px;
+    height: 361px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 1000 像素时 */
+@media (max-width: 1000px) {
+  .chish-hi {
+    width: 280px;
+    height: 289px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 690 像素时 */
+@media (max-width: 690px) {
+  .container {
+    margin: 0px 20px;
+    flex-direction: column;
+  }
+
+  .container .right-info {
+    margin-left: 0px;
+  }
+
+  .container .left-icon {
+    justify-content: center;
+  }
+
+  .container .right-info .button {
+    width: 100%;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 580 像素时 */
+@media (max-width: 580px) {
+  .chish-hi {
+    width: 190px;
+    height: 196px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 460 像素时 */
+@media (max-width: 460px) {
+  .container .left-icon div.icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 444 像素时 */
+@media (max-width: 444px) {
+  .kms-copyright {
+    font-size: 14px;
+  }
+
+  .container .right-info h1.title {
+    font-size: 26px;
+  }
+
+  .container .right-info h3.status {
+    font-size: 18px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 400 像素时 */
+@media (max-width: 400px) {
+  .container {
+    padding: 20px 30px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 370 像素时 */
+@media (max-width: 370px) {
+  .container .left-icon div.icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* 如果屏幕宽度等于或小于 320 像素时 */
+@media (max-width: 370px) {
+  .chish-hi {
+    width: 130px;
+    height: 134px;
+  }
+}

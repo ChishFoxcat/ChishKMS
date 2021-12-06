@@ -3,8 +3,8 @@
 ![last-commit](https://img.shields.io/github/last-commit/ChishFoxcat/ChishKMS/master)
 ![read-the-docs](https://img.shields.io/readthedocs/ChishKMS)
 ### 工作状态页面的编写
-> [仅vue版本]在页面上也能获取服务器的实时状态（每60秒获取1次）
-> 新增自适应暗色
+> - [仅vue版本]在页面上也能获取服务器的实时状态（每60秒获取1次）
+> - 新增自适应暗色
 
 ## API
 从 [UpTimeRobot API](https://uptimerobot.com/api/) 获取 KMS 服务器运行状态
@@ -29,5 +29,5 @@ location /api/status {
 ``` 
 
 ## Vue版本
-[点击我下载](https://github.com/ChishFoxcat/ChishKMS/vue)
+[点击我下载](https://github.com/ChishFoxcat/ChishKMS/tree/master/vue)
 <br>tips: 适应性更强

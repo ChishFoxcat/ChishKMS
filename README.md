@@ -29,5 +29,5 @@ location /api/status {
 ``` 
 
 ## Vue版本
-[点击我下载](https://github.com/ChishFoxcat/ChishKMS/tree/master/vue)
+[点击跳转 {.\vue}](https://github.com/ChishFoxcat/ChishKMS/tree/master/vue)
 <br>tips: 适应性更强

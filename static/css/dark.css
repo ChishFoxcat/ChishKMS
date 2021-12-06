@@ -1,0 +1,55 @@
+@charset "utf-8";
+/**
+ *   _____ _     _     _     _  ____  __  _____ 
+ *  / ____| |   (_)   | |   | |/ /  \/  |/ ____|
+ * | |    | |__  _ ___| |__ | ' /| \  / | (___  
+ * | |    | '_ \| / __| '_ \|  < | |\/| |\___ \ 
+ * | |____| | | | \__ \ | | | . \| |  | |____) |
+ *  \_____|_| |_|_|___/_| |_|_|\_\_|  |_|_____/ 
+ * =================================================
+ * ChishKMS's Dark Stylesheet
+ * Author: Chish & ohmyga
+ * Link: https://kms.fchish.cn/
+ * Github: https://github.com/ChishFoxcat
+ * Last Update: 2021/12/05
+ *
+ * Copyright (c) 2021 ChishKMS All Rights Reserved.
+ **/
+
+body.kms-dark {
+  background-color: rgba(34, 34, 34, 0.95);
+}
+
+.kms-dark .kms-app .container {
+  color: #ffffff;
+  background-color: rgba(34, 34, 34, 0.85);
+}
+
+/* 主容器阴影 */
+.kms-dark .kms-app .container.kms-container-shadow {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.kms-dark .kms-app .container.kms-container-shadow:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.kms-dark .kms-app .container .right-info .button {
+  color: #ffffff;
+  background-color: #212121;
+}
+
+.kms-dark .kms-app .container .right-info .button:hover {
+  background-color: #ffa500;
+}
+
+.kms-dark .kms-app .container .left-icon div.icon::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -10,7 +10,7 @@
  * Author: Chish & ohmyga
  * Link: https://kms.fchish.cn/
  * Github: https://github.com/ChishFoxcat
- * Last Update: 2021/02/06
+ * Last Update: 2021/12/05
  *
  * Copyright (c) 2021 ChishKMS All Rights Reserved.
  **/
@@ -48,15 +48,15 @@ var ChishKMSConfig = {
 
     // 链接
     link: {
-        cmd: "https://tb.fchish.cn/file/5fbe2ef67d1e3431cb853ad7/601d9cac38882399cea34526b2e04fb1d9647b25/ChishKMS.cmd", // KMS 激活脚本下载链接
+        cmd: "https://pan.fchish.cn/index.php/s/BY6gFgoy7TxYTkd/download/ChishKMS.cmd", // KMS 激活脚本下载链接
         home: "https://fchish.cn/", // 主站链接
         status: "https://status.fchish.cn/" // 检测站链接
     },
 
     // 图片链接
     image: {
-        pa: "https://tb.fchish.cn/file/5fbe2ef67d1e3431cb853ad7/601d92dd16c99df228f040e2a955bfd22602f7d1/%E8%B6%B4.png", // 趴
-        hi: "https://tb.fchish.cn/file/5fbe2ef67d1e3431cb853ad7/601d92ddb1c5ffa960fd45f69c1cff0ccf815eaa/hi.png", // HI!
+        pa: "./static/img/%E8%B6%B4.png", // 趴
+        hi: "./static/img/hi.png", // HI!
         logo: "./static/img/ChishKMS.png"
     }
 };
@@ -128,7 +128,24 @@ var ChishKMS = {
         document.querySelector("#kms-download-link").href = ChishKMSConfig.link.cmd;
         document.querySelector("#kms-site-home-link").href = ChishKMSConfig.link.home;
         document.querySelector("#kms-status-link").href = ChishKMSConfig.link.status;
-    }
+    },
+
+    // 判断是否深色模式
+    isDark: function () {
+        if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 如果不为深色模式则去掉 body 中的 kms-dark 类
+            document.body.classList.remove("kms-dark");
+        }
+
+        var schemeGeter = window.matchMedia("(prefers-color-scheme: dark)");
+        schemeGeter.addEventListener("change", function (scheme) {
+            if (scheme.matches) {
+                document.body.classList.add("kms-dark");
+            } else {
+                document.body.classList.remove("kms-dark");
+            }
+        });
+    },
 };
 
 /* 核心库 */
@@ -167,6 +184,7 @@ window.addEventListener("load", function () {
 // 获取状态就不等资源加载完 直接获取（好耶）
 ChishKMS.getKmsStatus();
 ChishKMS.Init(); // 初始化也是
+ChishKMS.isDark();
 
 /* 控制台版权信息 */
 console.clear(); // 清空控制台

@@ -97,6 +97,7 @@ body.kms-body {
 
 /* 以背景图形式展示 用户无法右键直接打开图片 且禁止用户选中*/
 .container .left-icon div.icon {
+  position: relative;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
